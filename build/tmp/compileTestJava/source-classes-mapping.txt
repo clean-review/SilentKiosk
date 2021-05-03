@@ -1,0 +1,6 @@
+org/judy/silentkiosk/SilentkioskApplicationTests.java
+ org.judy.silentkiosk.SilentkioskApplicationTests
+org/judy/silentkiosk/repository/StoreRepositoryTests.java
+ org.judy.silentkiosk.repository.StoreRepositoryTests
+org/judy/silentkiosk/repository/MenuRepositoryTests.java
+ org.judy.silentkiosk.repository.MenuRepositoryTests
