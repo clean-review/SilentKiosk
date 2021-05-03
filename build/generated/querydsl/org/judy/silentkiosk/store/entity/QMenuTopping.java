@@ -22,9 +22,9 @@ public class QMenuTopping extends EntityPathBase<MenuTopping> {
 
     public static final QMenuTopping menuTopping = new QMenuTopping("menuTopping");
 
-    public final QStoreMenu mno;
+    public final QStoreMenu storeMenu;
 
-    public final QStoreTopping tno;
+    public final QStoreTopping storeTopping;
 
     public QMenuTopping(String variable) {
         this(MenuTopping.class, forVariable(variable), INITS);
@@ -44,8 +44,8 @@ public class QMenuTopping extends EntityPathBase<MenuTopping> {
 
     public QMenuTopping(Class<? extends MenuTopping> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
-        this.mno = inits.isInitialized("mno") ? new QStoreMenu(forProperty("mno"), inits.get("mno")) : null;
-        this.tno = inits.isInitialized("tno") ? new QStoreTopping(forProperty("tno"), inits.get("tno")) : null;
+        this.storeMenu = inits.isInitialized("storeMenu") ? new QStoreMenu(forProperty("storeMenu"), inits.get("storeMenu")) : null;
+        this.storeTopping = inits.isInitialized("storeTopping") ? new QStoreTopping(forProperty("storeTopping"), inits.get("storeTopping")) : null;
     }
 
 }

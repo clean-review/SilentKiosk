@@ -34,7 +34,7 @@ public class QStoreMenu extends EntityPathBase<StoreMenu> {
 
     public final StringPath mPrice = createString("mPrice");
 
-    public final QStore sno;
+    public final QStore store;
 
     public QStoreMenu(String variable) {
         this(StoreMenu.class, forVariable(variable), INITS);
@@ -54,7 +54,7 @@ public class QStoreMenu extends EntityPathBase<StoreMenu> {
 
     public QStoreMenu(Class<? extends StoreMenu> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
-        this.sno = inits.isInitialized("sno") ? new QStore(forProperty("sno")) : null;
+        this.store = inits.isInitialized("store") ? new QStore(forProperty("store")) : null;
     }
 
 }

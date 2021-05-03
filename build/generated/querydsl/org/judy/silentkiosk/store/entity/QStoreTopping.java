@@ -22,7 +22,7 @@ public class QStoreTopping extends EntityPathBase<StoreTopping> {
 
     public static final QStoreTopping storeTopping = new QStoreTopping("storeTopping");
 
-    public final QStore sno;
+    public final QStore store;
 
     public final StringPath tImg = createString("tImg");
 
@@ -50,7 +50,7 @@ public class QStoreTopping extends EntityPathBase<StoreTopping> {
 
     public QStoreTopping(Class<? extends StoreTopping> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
-        this.sno = inits.isInitialized("sno") ? new QStore(forProperty("sno")) : null;
+        this.store = inits.isInitialized("store") ? new QStore(forProperty("store")) : null;
     }
 
 }

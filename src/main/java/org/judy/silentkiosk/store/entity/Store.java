@@ -29,8 +29,12 @@ public class Store extends BaseEntity {
 
     private String category;
 
+    @Column(name = "logoImg")
     private String logoImg;
 
     private boolean enable;
+
+
+
 
 }

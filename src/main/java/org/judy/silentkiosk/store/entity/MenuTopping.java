@@ -11,17 +11,15 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Getter
 @Table(name = "tbl_menu_topping")
-public class MenuTopping{
+public class MenuTopping implements Serializable {
 
     @Id
-    @Column(name = "mno")
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "mno")
-    private StoreMenu mno;
+    private StoreMenu storeMenu;
 
     @Id
-    @Column(name = "tno")
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tno")
-    private StoreTopping tno;
+    private StoreTopping storeTopping;
 }
