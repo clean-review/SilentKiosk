@@ -1,6 +1,7 @@
 package org.judy.silentkiosk.repository;
 
 import lombok.extern.log4j.Log4j2;
+import org.judy.silentkiosk.store.entity.Store;
 import org.judy.silentkiosk.store.repository.StoreRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,15 @@ public class StoreRepositoryTests {
 
     @Test
     public void testGetStore(){
-        Long sno = 34L;
-        log.info(storeRepository.getStoreBy(sno));
+        Long sno = 53L;
+        log.info(storeRepository.getStoreBySno(sno));
     }
+
+    @Test
+    public void testGetStoreMenu(){
+
+        log.info(storeRepository.getStoreMenuBySno(53L));
+    }
+
 
 }

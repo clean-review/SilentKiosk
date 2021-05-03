@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Getter
-@ToString(exclude = "sno")
+@ToString(exclude = "store")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,7 +19,7 @@ public class StoreMenu {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sno")
-    private Store sno;
+    private Store store;
 
     private String menuName;
 

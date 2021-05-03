@@ -10,7 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "tbl_store_topping")
-@ToString(exclude = "sno")
+@ToString(exclude = "store")
 public class StoreTopping {
 
     @Id
@@ -25,5 +25,6 @@ public class StoreTopping {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sno")
-    private Store sno;
+    private Store store;
+
 }
