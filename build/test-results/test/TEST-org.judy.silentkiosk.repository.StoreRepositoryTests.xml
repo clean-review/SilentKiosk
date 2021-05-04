@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.judy.silentkiosk.repository.StoreRepositoryTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-04T07:47:22" hostname="LAPTOP-2A8VP129" time="0.251">
+  <properties/>
+  <testcase name="testGetStore()" classname="org.judy.silentkiosk.repository.StoreRepositoryTests" time="0.251"/>
+  <system-out><![CDATA[16:47:17.273 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+16:47:17.290 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+16:47:17.305 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [org.judy.silentkiosk.repository.StoreRepositoryTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+16:47:17.321 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.judy.silentkiosk.repository.StoreRepositoryTests], using SpringBootContextLoader
+16:47:17.321 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.judy.silentkiosk.repository.StoreRepositoryTests]: class path resource [org/judy/silentkiosk/repository/StoreRepositoryTests-context.xml] does not exist
+16:47:17.321 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.judy.silentkiosk.repository.StoreRepositoryTests]: class path resource [org/judy/silentkiosk/repository/StoreRepositoryTestsContext.groovy] does not exist
+16:47:17.321 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [org.judy.silentkiosk.repository.StoreRepositoryTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:47:17.321 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.judy.silentkiosk.repository.StoreRepositoryTests]: StoreRepositoryTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:47:17.364 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [org.judy.silentkiosk.repository.StoreRepositoryTests]
+16:47:17.437 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\MINJUNG\ideaProjects\silentkiosk\build\classes\java\main\org\judy\silentkiosk\SilentkioskApplication.class]
+16:47:17.437 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.judy.silentkiosk.SilentkioskApplication for test class org.judy.silentkiosk.repository.StoreRepositoryTests
+16:47:17.553 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [org.judy.silentkiosk.repository.StoreRepositoryTests]: using defaults.
+16:47:17.553 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+16:47:17.577 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7e0a7706, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5e72c34a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@76e3010f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@24d67b42, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@9c98a99, org.springframework.test.context.support.DirtiesContextTestExecutionListener@41e96079, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2f6cea32, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@38f798f6, org.springframework.test.context.event.EventPublishingTestExecutionListener@7daf4033, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@77cf1d57, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3f3a54e6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3b8e5bdf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3ca72a45, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@338dbd23, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5e7d52d0]
+16:47:17.577 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@37a49bef testClass = StoreRepositoryTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@70b8cf3c testClass = StoreRepositoryTests, locations = '{}', classes = '{class org.judy.silentkiosk.SilentkioskApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@169a7559, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@48e961dc, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@16e391d4, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5f5feb42, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5826fe7f, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4da3bdf2], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+16:47:17.673 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.5)
+
+2021-05-04 16:47:17.947  INFO 14240 --- [    Test worker] o.j.s.repository.StoreRepositoryTests    : Starting StoreRepositoryTests using Java 15.0.1 on LAPTOP-2A8VP129 with PID 14240 (started by MINJUNG in C:\Users\MINJUNG\ideaProjects\silentkiosk)
+2021-05-04 16:47:17.947  INFO 14240 --- [    Test worker] o.j.s.repository.StoreRepositoryTests    : No active profile set, falling back to default profiles: default
+2021-05-04 16:47:18.656  INFO 14240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-04 16:47:18.740  INFO 14240 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 2 JPA repository interfaces.
+2021-05-04 16:47:19.284  INFO 14240 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-04 16:47:19.336  INFO 14240 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-04 16:47:19.445  INFO 14240 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-04 16:47:19.547  INFO 14240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-04 16:47:19.972  INFO 14240 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-04 16:47:20.003  INFO 14240 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-04 16:47:20.324  WARN 14240 --- [    Test worker] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): org.judy.silentkiosk.store.entity.MenuTopping
+2021-05-04 16:47:20.324  WARN 14240 --- [    Test worker] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): org.judy.silentkiosk.store.entity.MenuTopping
+2021-05-04 16:47:20.976  INFO 14240 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-04 16:47:20.992  INFO 14240 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-04 16:47:21.102  INFO 14240 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientInboundChannelExecutor'
+2021-05-04 16:47:21.117  INFO 14240 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientOutboundChannelExecutor'
+2021-05-04 16:47:21.117  INFO 14240 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'brokerChannelExecutor'
+2021-05-04 16:47:21.631  INFO 14240 --- [    Test worker] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'messageBrokerTaskScheduler'
+2021-05-04 16:47:21.752  WARN 14240 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-04 16:47:22.558  INFO 14240 --- [    Test worker] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2021-05-04 16:47:22.558  INFO 14240 --- [    Test worker] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3e5d8a9d]]
+2021-05-04 16:47:22.558  INFO 14240 --- [    Test worker] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2021-05-04 16:47:22.574  INFO 14240 --- [    Test worker] o.j.s.repository.StoreRepositoryTests    : Started StoreRepositoryTests in 4.895 seconds (JVM running for 5.999)
+Hibernate: 
+    select
+        store0_.sno as sno1_5_,
+        store0_.updatedate as updateda2_5_,
+        store0_.regdate as regdate3_5_,
+        store0_.address as address4_5_,
+        store0_.category as category5_5_,
+        store0_.enable as enable6_5_,
+        store0_.lat as lat7_5_,
+        store0_.lng as lng8_5_,
+        store0_.logoImg as logoimg9_5_,
+        store0_.mid as mid10_5_,
+        store0_.sname as sname11_5_ 
+    from
+        tbl_store store0_ 
+    where
+        store0_.sno=?
+2021-05-04 16:47:22.824  INFO 14240 --- [    Test worker] o.j.s.repository.StoreRepositoryTests    : Store(sno=53, mid=user7, sname=몽이네 떡볶이, lat=37.5086774062183, lng=126.937652246893, address=서울특별시 동작구 장승배기로19다길 12 (노량진동), category=분식, logoImg=logoImg_bc287d40-084b-4fc8-94c6-4d1e45f05af8_ee290925f67d66a938067a937f3c1de5.jpg, enable=true)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
