@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.judy.silentkiosk.test.dto.OrderDTO;
 
 @Data
 @Builder
@@ -12,6 +11,12 @@ import org.judy.silentkiosk.test.dto.OrderDTO;
 @NoArgsConstructor
 public class ChatMessage {
 
+    private Long sno;
     //임시
-    private OrderDTO orderDTO;
+    private String dto;
+
+    private Long orderNum;
+
+    private MessageType type;
+
 }

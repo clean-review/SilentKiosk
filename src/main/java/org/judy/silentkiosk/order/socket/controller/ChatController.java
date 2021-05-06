@@ -18,7 +18,7 @@ public class ChatController {
     @MessageMapping("/chat.sendMessage")
     public ChatMessage sendMessage(@Payload ChatMessage chatMessage) {
         System.out.println(chatMessage);
-        Long sno = chatMessage.getOrderDTO().getSno();
+        Long sno = chatMessage.getSno();
         System.out.println("sno:" + sno);
         String destination = "/order/public/"+sno;
         simpMessagingTemplate.convertAndSend(destination, chatMessage);
@@ -26,9 +26,9 @@ public class ChatController {
     }
 
     @MessageMapping("/chat.addUser")
-    @SendTo("/topic/public")
+    @SendTo("/order/public")
     public ChatMessage addUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor) {
-        headerAccessor.getSessionAttributes().put("sno", chatMessage.getOrderDTO().getSno());
+        headerAccessor.getSessionAttributes().put("sno", chatMessage.getSno());
 
         return chatMessage;
     }

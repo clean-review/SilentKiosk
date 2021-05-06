@@ -8,6 +8,4 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Log4j2
 public class OrderServiceImpl implements OrderService{
-
-
 }

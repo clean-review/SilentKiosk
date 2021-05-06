@@ -1,4 +1,4 @@
-package org.judy.silent_kiosk.controller;
+package org.judy.silentkiosk.order.controller;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
