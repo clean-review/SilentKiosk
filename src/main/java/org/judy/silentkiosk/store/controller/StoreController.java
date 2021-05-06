@@ -21,7 +21,7 @@ public class StoreController {
     private final StoreService service;
 
     @CrossOrigin
-    @GetMapping(value = "/list/{sno}", produces = "application/json")
+    @GetMapping(value = "/{sno}", produces = "application/json")
     public ResponseEntity<StoreDTO> selectList(@PathVariable("sno") Long sno) {
 
         log.info("list..............");
@@ -35,7 +35,7 @@ public class StoreController {
     @GetMapping(value = "/menu/{sno}", produces = "application/json")
     public ResponseEntity<List<StoreMenuDTO>> getMenu(@PathVariable("sno") Long sno) {
 
-        log.info("list..............");
+        log.info("menu..............");
 
         List<StoreMenuDTO> menuList= service.getStoreMenu(sno);
 
