@@ -7,7 +7,7 @@
 <body>
 <h1>order</h1>
 <button class="orderBtn">order</button>
-</body>
+
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 
@@ -37,10 +37,13 @@
         console.log(orderDTO)
 
         axios.post("http://localhost:8080/getOrder", orderDTO)
-        .then(res => console.dir(res.data))
+            .then(res => console.dir(res.data))
 
     }, false)
 
 
 </script>
+
+</body>
+
 </html>
