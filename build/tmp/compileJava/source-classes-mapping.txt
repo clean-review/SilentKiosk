@@ -4,6 +4,8 @@ org/judy/silentkiosk/order/entity/Kiosk.java
 org/judy/silentkiosk/order/entity/Order.java
  org.judy.silentkiosk.order.entity.Order
  org.judy.silentkiosk.order.entity.Order$OrderBuilder
+org/judy/silentkiosk/test/SilentKioskApplication.java
+ org.judy.silentkiosk.test.SilentKioskApplication
 org/judy/silentkiosk/order/entity/QOrder.java
  org.judy.silentkiosk.order.entity.QOrder
 org/judy/silentkiosk/order/entity/QOrderMenu.java
@@ -62,18 +64,26 @@ org/judy/silentkiosk/order/socket/model/ChatMessage.java
  org.judy.silentkiosk.order.socket.model.ChatMessage$ChatMessageBuilder
 org/judy/silentkiosk/test/service/OrderService.java
  org.judy.silentkiosk.test.service.OrderService
+<<<<<<< Updated upstream
 org/judy/silentkiosk/store/repository/ToppingRepository.java
  org.judy.silentkiosk.store.repository.ToppingRepository
+=======
+>>>>>>> Stashed changes
 org/judy/silentkiosk/SilentkioskApplication.java
  org.judy.silentkiosk.SilentkioskApplication
 org/judy/silentkiosk/store/entity/QStoreTopping.java
  org.judy.silentkiosk.store.entity.QStoreTopping
 org/judy/silentkiosk/common/entity/QBaseEntity.java
  org.judy.silentkiosk.common.entity.QBaseEntity
+<<<<<<< Updated upstream
 org/judy/silentkiosk/ServletInitializer.java
  org.judy.silentkiosk.ServletInitializer
 org/judy/silentkiosk/order/controller/TestController.java
  org.judy.silentkiosk.order.controller.TestController
+=======
+org/judy/silentkiosk/order/controller/TestController.java
+ org.judy.silent_kiosk.controller.TestController
+>>>>>>> Stashed changes
 org/judy/silentkiosk/store/entity/QMenuTopping.java
  org.judy.silentkiosk.store.entity.QMenuTopping
 org/judy/silentkiosk/store/entity/QStore.java
@@ -84,5 +94,16 @@ org/judy/silentkiosk/order/dto/OrderMenuDTO.java
 org/judy/silentkiosk/order/entity/OrderTopping.java
  org.judy.silentkiosk.order.entity.OrderTopping
  org.judy.silentkiosk.order.entity.OrderTopping$OrderToppingBuilder
+<<<<<<< Updated upstream
 org/judy/silentkiosk/order/controller/OrderController.java
  org.judy.silentkiosk.order.controller.OrderController
+=======
+org/judy/silentkiosk/test/controller/TestController.java
+ org.judy.silentkiosk.test.controller.TestController
+org/judy/silentkiosk/test/ServletInitializer.java
+ org.judy.silentkiosk.test.ServletInitializer
+org/judy/silentkiosk/ServletInitializer.java
+ org.judy.silentkiosk.ServletInitializer
+org/judy/silentkiosk/store/repository/MenuRepository.java
+ org.judy.silentkiosk.store.repository.MenuRepository
+>>>>>>> Stashed changes
