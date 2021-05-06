@@ -6,5 +6,6 @@ public enum MessageType {
     FINISH,
     CANCEL,
     JOIN,
-    LEAVE
+    LEAVE,
+    CHAT
 }

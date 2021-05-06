@@ -13,7 +13,7 @@ public class ToppingDTO {
 
     private Long tno;
 
-    private String tName,tPrice;
+    private String tname,tprice;
 
     private Long tqty;
 }

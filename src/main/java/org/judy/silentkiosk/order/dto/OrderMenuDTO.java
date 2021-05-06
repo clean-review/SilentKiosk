@@ -15,7 +15,7 @@ public class OrderMenuDTO {
 
     private Long mno;
 
-    private String mName,mPrice;
+    private String mname,mprice;
 
     private Long mqty;
 
