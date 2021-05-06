@@ -22,6 +22,9 @@ org/judy/silentkiosk/store/entity/QStoreMenu.java
  org.judy.silentkiosk.store.entity.QStoreMenu
 org/judy/silentkiosk/order/entity/QKiosk.java
  org.judy.silentkiosk.order.entity.QKiosk
+org/judy/silentkiosk/store/dto/StoreToppingDTO.java
+ org.judy.silentkiosk.store.dto.StoreToppingDTO
+ org.judy.silentkiosk.store.dto.StoreToppingDTO$StoreToppingDTOBuilder
 org/judy/silentkiosk/order/entity/QOrderTopping.java
  org.judy.silentkiosk.order.entity.QOrderTopping
 org/judy/silentkiosk/order/socket/controller/ChatController.java
@@ -43,6 +46,9 @@ org/judy/silentkiosk/order/dto/OrderDTO.java
 org/judy/silentkiosk/order/entity/OrderMenu.java
  org.judy.silentkiosk.order.entity.OrderMenu
  org.judy.silentkiosk.order.entity.OrderMenu$OrderMenuBuilder
+org/judy/silentkiosk/store/dto/StoreMenuDTO.java
+ org.judy.silentkiosk.store.dto.StoreMenuDTO
+ org.judy.silentkiosk.store.dto.StoreMenuDTO$StoreMenuDTOBuilder
 org/judy/silentkiosk/store/repository/StoreRepository.java
  org.judy.silentkiosk.store.repository.StoreRepository
 org/judy/silentkiosk/common/entity/BaseEntity.java
@@ -54,36 +60,31 @@ org/judy/silentkiosk/store/entity/StoreMenu.java
  org.judy.silentkiosk.store.entity.StoreMenu$StoreMenuBuilder
 org/judy/silentkiosk/order/socket/model/MessageType.java
  org.judy.silentkiosk.order.socket.model.MessageType
+org/judy/silentkiosk/store/service/StoreService.java
+ org.judy.silentkiosk.store.service.StoreService
 org/judy/silentkiosk/order/dto/ToppingDTO.java
  org.judy.silentkiosk.order.dto.ToppingDTO
  org.judy.silentkiosk.order.dto.ToppingDTO$ToppingDTOBuilder
 org/judy/silentkiosk/order/socket/config/WebSocketConfig.java
  org.judy.silentkiosk.order.socket.config.WebSocketConfig
+org/judy/silentkiosk/store/dto/StoreDTO.java
+ org.judy.silentkiosk.store.dto.StoreDTO
+ org.judy.silentkiosk.store.dto.StoreDTO$StoreDTOBuilder
 org/judy/silentkiosk/order/socket/model/ChatMessage.java
  org.judy.silentkiosk.order.socket.model.ChatMessage
  org.judy.silentkiosk.order.socket.model.ChatMessage$ChatMessageBuilder
-org/judy/silentkiosk/test/service/OrderService.java
- org.judy.silentkiosk.test.service.OrderService
-<<<<<<< Updated upstream
 org/judy/silentkiosk/store/repository/ToppingRepository.java
  org.judy.silentkiosk.store.repository.ToppingRepository
-=======
->>>>>>> Stashed changes
+org/judy/silentkiosk/test/service/OrderService.java
+ org.judy.silentkiosk.test.service.OrderService
 org/judy/silentkiosk/SilentkioskApplication.java
  org.judy.silentkiosk.SilentkioskApplication
 org/judy/silentkiosk/store/entity/QStoreTopping.java
  org.judy.silentkiosk.store.entity.QStoreTopping
 org/judy/silentkiosk/common/entity/QBaseEntity.java
  org.judy.silentkiosk.common.entity.QBaseEntity
-<<<<<<< Updated upstream
-org/judy/silentkiosk/ServletInitializer.java
- org.judy.silentkiosk.ServletInitializer
-org/judy/silentkiosk/order/controller/TestController.java
- org.judy.silentkiosk.order.controller.TestController
-=======
 org/judy/silentkiosk/order/controller/TestController.java
  org.judy.silent_kiosk.controller.TestController
->>>>>>> Stashed changes
 org/judy/silentkiosk/store/entity/QMenuTopping.java
  org.judy.silentkiosk.store.entity.QMenuTopping
 org/judy/silentkiosk/store/entity/QStore.java
@@ -94,16 +95,13 @@ org/judy/silentkiosk/order/dto/OrderMenuDTO.java
 org/judy/silentkiosk/order/entity/OrderTopping.java
  org.judy.silentkiosk.order.entity.OrderTopping
  org.judy.silentkiosk.order.entity.OrderTopping$OrderToppingBuilder
-<<<<<<< Updated upstream
-org/judy/silentkiosk/order/controller/OrderController.java
- org.judy.silentkiosk.order.controller.OrderController
-=======
 org/judy/silentkiosk/test/controller/TestController.java
  org.judy.silentkiosk.test.controller.TestController
 org/judy/silentkiosk/test/ServletInitializer.java
  org.judy.silentkiosk.test.ServletInitializer
 org/judy/silentkiosk/ServletInitializer.java
  org.judy.silentkiosk.ServletInitializer
-org/judy/silentkiosk/store/repository/MenuRepository.java
- org.judy.silentkiosk.store.repository.MenuRepository
->>>>>>> Stashed changes
+org/judy/silentkiosk/store/service/StoreServiceImpl.java
+ org.judy.silentkiosk.store.service.StoreServiceImpl
+org/judy/silentkiosk/store/controller/StoreController.java
+ org.judy.silentkiosk.store.controller.StoreController
