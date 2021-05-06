@@ -101,7 +101,7 @@ org/judy/silentkiosk/test/ServletInitializer.java
  org.judy.silentkiosk.test.ServletInitializer
 org/judy/silentkiosk/ServletInitializer.java
  org.judy.silentkiosk.ServletInitializer
-org/judy/silentkiosk/store/controller/StoreController.java
- org.judy.silentkiosk.store.controller.StoreController
 org/judy/silentkiosk/store/service/StoreServiceImpl.java
  org.judy.silentkiosk.store.service.StoreServiceImpl
+org/judy/silentkiosk/store/controller/StoreController.java
+ org.judy.silentkiosk.store.controller.StoreController
