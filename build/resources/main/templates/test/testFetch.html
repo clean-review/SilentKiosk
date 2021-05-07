@@ -7,21 +7,43 @@
 <body>
 <h1>order</h1>
 <button class="orderBtn">order</button>
-</body>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 
-    const data = {sno:1, menu: "치돈", price: 9000, qty: 1}
+    let orderMenuDTOList = []
+
+    let toppingDTOList1 = []
+    let toppingDTOList2 = []
+
+    const toppingDTO1 = {tno : 1, tname : "밥추가", tprice : "1000", tqty : 2}
+    const toppingDTO2 = {tno : 2, tname : "샐러드추가", tprice : "500", tqty : 3}
+
+    toppingDTOList1.push(toppingDTO1)
+    toppingDTOList1.push(toppingDTO2)
+
+    toppingDTOList2.push(toppingDTO1)
+    toppingDTOList2.push(toppingDTO2)
+
+    const orderMenuDTO1 = {mno : 1, mname :"치돈", mprice : "9000", mqty : 2 , toppingDTOList : toppingDTOList1}
+    const orderMenuDTO2 = {mno : 2, mname :"냉까스", mprice : "8000", mqty : 1 , toppingDTOList : toppingDTOList2}
+
+    orderMenuDTOList.push(orderMenuDTO1)
+    orderMenuDTOList.push(orderMenuDTO2)
+
+    const orderDTO = {sno:1, serialNum : "kiosk-0506", orderMenuDTOList: orderMenuDTOList}
     document.querySelector(".orderBtn").addEventListener("click", function (e) {
         e.preventDefault()
-        fetch("http://localhost:8080/getOrder", {
-            method: "post",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        }).then(res => res.text()).then(result => console.log(result))
+        console.log(orderDTO)
+
+        axios.post("https://localhost:8080/getOrder", orderDTO)
+            .then(res => console.dir(res.data))
+
     }, false)
 
 
 </script>
+
+</body>
+
 </html>

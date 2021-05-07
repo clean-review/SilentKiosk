@@ -36,7 +36,7 @@
         e.preventDefault()
         console.log(orderDTO)
 
-        axios.post("http://localhost:8080/getOrder", orderDTO)
+        axios.post("https://localhost:8080/getOrder", orderDTO)
             .then(res => console.dir(res.data))
 
     }, false)
