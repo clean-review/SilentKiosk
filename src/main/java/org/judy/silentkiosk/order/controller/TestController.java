@@ -16,6 +16,10 @@ public class TestController {
 
     @GetMapping("/testFetch")
     public void testFetch(){
+    }
+
+    @GetMapping("/test")
+    public void testLayout(){
 
     }
 }
