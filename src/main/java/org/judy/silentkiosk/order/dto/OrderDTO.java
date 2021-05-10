@@ -13,6 +13,7 @@ import java.util.List;
 @Data
 public class OrderDTO {
 
+    //주문번호
     private Long OrderNum;
 
     private String serialNum;

@@ -15,4 +15,5 @@ public interface StoreRepository extends JpaRepository<Store,Long> {
     @Query("select sm from StoreMenu sm where sm.store.sno = :sno")
     public List<StoreMenu> getStoreMenuBySno(Long sno);
 
+
 }
