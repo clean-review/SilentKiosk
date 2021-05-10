@@ -1,6 +1,10 @@
-org/judy/silentkiosk/repository/ToppingRepositoryTests.java
- org.judy.silentkiosk.repository.ToppingRepositoryTests
 org/judy/silentkiosk/SilentkioskApplicationTests.java
  org.judy.silentkiosk.SilentkioskApplicationTests
+org/judy/silentkiosk/repository/ToppingRepositoryTests.java
+ org.judy.silentkiosk.repository.ToppingRepositoryTests
 org/judy/silentkiosk/repository/StoreRepositoryTests.java
  org.judy.silentkiosk.repository.StoreRepositoryTests
+org/judy/silentkiosk/order/repository/OrderRepositoryTests.java
+ org.judy.silentkiosk.order.repository.OrderRepositoryTests
+org/judy/silentkiosk/order/service/OrderServiceTests.java
+ org.judy.silentkiosk.order.service.OrderServiceTests

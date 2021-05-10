@@ -4,9 +4,9 @@ import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.judy.silentkiosk.order.dto.OrderDTO;
+import org.judy.silentkiosk.order.service.OrderService;
 import org.judy.silentkiosk.order.socket.model.ChatMessage;
 import org.judy.silentkiosk.order.socket.model.MessageType;
-import org.judy.silentkiosk.test.service.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -28,15 +28,21 @@ public class OrderController {
 
         log.info(orderDTO);
 
+
+        //DB에 저장하는 로직 쓸 위치
+
+
         Long sno = orderDTO.getSno();
+
+        String destination = "/order/public/"+sno;
+
+        Long ordernum = orderService.getOrderNum(sno);
+
+        orderDTO.setOrderNum(ordernum);
 
         Gson gson = new Gson();
 
         String dto = gson.toJson(orderDTO);
-
-        String destination = "/order/public/"+sno;
-
-        Long ordernum = 120L;
 
         ChatMessage chatMessage = ChatMessage.builder().orderNum(ordernum).sno(sno).dto(dto).type(MessageType.CHAT).build();
         simpMessagingTemplate.convertAndSend(destination, chatMessage);
