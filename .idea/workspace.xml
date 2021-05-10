@@ -4,52 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11d69fdc-ae12-4043-9568-30710ad88e8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/store/repository/MenuRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/store/service/MenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/store/service/MenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/judy/silentkiosk/repository/MenuRepositoryTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/judy/silentkiosk/service/MenuServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silent_kiosk/controller/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/dto/OrderDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/dto/OrderDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/dto/OrderMenuDTO$OrderMenuDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/dto/OrderMenuDTO$OrderMenuDTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/dto/OrderMenuDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/dto/OrderMenuDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/dto/ToppingDTO$ToppingDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/dto/ToppingDTO$ToppingDTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/dto/ToppingDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/dto/ToppingDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/socket/controller/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/socket/controller/ChatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/socket/model/ChatMessage$ChatMessageBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/socket/model/ChatMessage$ChatMessageBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/socket/model/ChatMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/socket/model/ChatMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/socket/model/MessageType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/socket/model/MessageType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/store/controller/StoreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/store/controller/StoreController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/test/ServletInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/test/SilentKioskApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/test/controller/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/org.judy.silentkiosk.repository.StoreRepositoryTests.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/org.judy.silentkiosk.repository.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/test/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/test/chat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/test/testFetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/test/testFetch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-org.judy.silentkiosk.repository.StoreRepositoryTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/dto/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/dto/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/store/controller/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/store/controller/StoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/store/repository/StoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/store/repository/StoreRepository.java" afterDir="false" />
-    </list>
+    <list default="true" id="11d69fdc-ae12-4043-9568-30710ad88e8b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,17 +53,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.MenuServiceTests.getMenuTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MenuRepositoryTests.getMenuTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -194,9 +138,9 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.StoreRepositoryTests.testGetStore" />
-      <item itemvalue="Spring Boot.SilentkioskApplication" />
       <item itemvalue="Gradle.MenuRepositoryTests.getMenuTest" />
       <item itemvalue="Gradle.MenuServiceTests.getMenuTest" />
+      <item itemvalue="Spring Boot.SilentkioskApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -218,6 +162,7 @@
       <workItem from="1620260806104" duration="620000" />
       <workItem from="1620265321102" duration="631000" />
       <workItem from="1620266740897" duration="6619000" />
+      <workItem from="1620637596636" duration="14000" />
     </task>
     <servers />
   </component>
