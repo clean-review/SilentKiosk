@@ -1,13 +1,19 @@
 package org.judy.silentkiosk.store.service;
 
 import org.judy.silentkiosk.store.dto.StoreMenuDTO;
+import org.judy.silentkiosk.store.dto.StoreToppingDTO;
 import org.judy.silentkiosk.store.entity.StoreMenu;
+import org.judy.silentkiosk.store.entity.StoreTopping;
+
+import java.util.List;
 
 public interface MenuService {
 
     StoreMenuDTO getMenu(Long mno);
 
-    default StoreMenuDTO entityToDTO(StoreMenu storeMenu) {
+    List<StoreMenuDTO> getMenuTopping(Long mno);
+
+    default StoreMenuDTO entityToDTO(StoreMenu storeMenu, StoreTopping topping) {
         StoreMenuDTO storeMenuDTO = StoreMenuDTO.builder()
                 .mno(storeMenu.getMno())
                 .sno(storeMenu.getStore().getSno())
