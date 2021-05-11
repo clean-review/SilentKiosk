@@ -2,110 +2,136 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <meta charset="utf-8" />
-  <link th:rel="apple-touch-icon" sizes="76x76" href="@{/assets/img/apple-icon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
-    Order List
-  </title>
-  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-  <!--     Fonts and icons     -->
-  <link th:href="@{/assets/css/judyCustom.css}" rel="stylesheet" />
-  <link th:rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link th:rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- CSS Files -->
-  <link th:href="@{/assets/css/material-dashboard.css?v=2.1.2}" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link th:href="@{/assets/demo/demo.css}" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-  <link rel="stylesheet" th:href="@{/assets/css/judyCustom.css}">
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="/css/main.css"/>
+    <link th:rel="apple-touch-icon" sizes="76x76" href="@{/assets/img/apple-icon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>
+        Order List
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport'/>
+    <!--     Fonts and icons     -->
+    <link th:href="@{/assets/css/judyCustom.css}" rel="stylesheet"/>
+    <link th:rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
+    <link th:rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link th:href="@{/assets/css/material-dashboard.css?v=2.1.2}" rel="stylesheet"/>
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link th:href="@{/assets/demo/demo.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" th:href="@{/assets/css/judyCustom.css}">
 
 </head>
 
+
 <body class="">
 
+<div id="username-page" >
+    <div class="username-page-container">
+        <h1 class="title">로그인하세요</h1>
 
-  <div>
+        <form id="usernameForm" name="usernameForm">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Username" autocomplete="off" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="accent username-submit">가게 오픈하기</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div id="chat-page" class="hidden" style="overflow:scroll; ">
 
     <div class="logo" style="padding: 30px">
-      <a href="/admin/notice/list" class="simple-text logo-normal"><span style="font-family: 'yg-jalnan'; color: #ee6d39; font-size:x-large; ">Silent Kiosk</span></a>
+        <a href="/admin/notice/list" class="simple-text logo-normal"><span
+                style="font-family: 'yg-jalnan'; color: #ee6d39; font-size:x-large; ">Silent Kiosk</span></a>
     </div>
+
 
     <!-------------------------------------------card------------------------------------->
     <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="cardHeaderStyle card-header card-header-primary">
-                <div>
-                  <h4 class="card-title ">메뉴이름</h4>
-                  <p class="card-category">Here is a subtitle for this table</p>
-                </div>
-              </div>
-
-              <div class="card-body">
-
-                <ul class="navCat nav nav-pills nav-fill">
-                  <li class="nav-item"><a class="catNav nav-link "
-                                          data-value="1">주문리스트</a></li>
-                  <li class="nav-item"><a class="catNav nav-link "
-                                          data-value="2">주문완료</a></li>
-                </ul>
-
-                <div class="row">
-
-
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                      <div class="menuInfo card card-stats">
-                        <div class="card-header card-header-warning card-header-icon">
-                          <h5 class="menuName card-title">메뉴이름</h5>
-                          <p class="menuContent card-category">메뉴내용</p>
-                          <p class="menuPrice card-category">가격</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="cardHeaderStyle card-header card-header-primary">
+                            <div>
+                                <h4 class="card-title ">[[${sname}]]</h4>
+                                <p class="card-category">Here is a subtitle for this table</p>
+                            </div>
                         </div>
-                        <div class="card-footer">
-                          <div class="menuBtn stats" data-mno="${menu.mno }">
-                            <button type="submit"
-                                    class="modBtn btn btn-primary pull-right"
-                                    style="" value="/admin/store/menuModify">수정
-                            </button>
-                            <button type="submit"
-                                    class="delBtn btn btn-danger pull-right"
-                                    style="">삭제
-                            </button>
 
-                          </div>
+                        <div class="card-body">
+
+                            <ul class="navCat nav nav-pills nav-fill">
+                                <li class="nav-item"><a class="catNav nav-link "
+                                                        data-value="1">주문리스트</a></li>
+                                <li class="nav-item"><a class="catNav nav-link "
+                                                        data-value="2">주문완료</a></li>
+                            </ul>
+
+                            <div class="row orderList">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="menuInfo card card-stats">
+                                        <div class="card-header card-header-warning card-header-icon">
+                                            <h5 class="menuName card-title">메뉴이름</h5>
+                                            <p class="menuContent card-category">메뉴내용</p>
+                                            <p class="menuPrice card-category">가격</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="menuBtn stats" data-mno="${menu.mno }">
+                                                <button type="submit"
+                                                        class="modBtn btn btn-primary pull-right"
+                                                        style="" value="/admin/store/menuModify">수정
+                                                </button>
+                                                <button type="submit"
+                                                        class="delBtn btn btn-danger pull-right"
+                                                        style="">삭제
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 chat-container">
+                                    <div class="chat-header">
+                                        <h2>주문정보</h2>
+                                    </div>
+                                    <div class="connecting">
+                                        연결중...
+                                    </div>
+                                    <ul id="messageArea">
+
+                                    </ul>
+                                    <form id="messageForm" name="messageForm">
+                                        <div class="form-group">
+                                            <div class="input-group clearfix">
+                                                <input type="text" id="message" placeholder="Type a message..."
+                                                       autocomplete="off"
+                                                       class="form-control"/>
+                                                <button type="submit" class="primary">보내기</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="card card-stats">
-                      <div class="card-header card-header-warning card-header-icon">
-
-
-                      </div>
-                      <div class="card-footer">
-                        <div class="stats">
-                          <button type="submit"
-                                  class="regBtn btn btn-primary pull-right"
-                                  style="" value="/admin/store/menuRegister">등록
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
 
                 </div>
-              </div>
             </div>
-
-          </div>
         </div>
-      </div>
 
-
-  </div>
+    </div>
+</div>
 
 
 <!--   Core JS Files   -->
@@ -149,6 +175,170 @@
 <script src="/assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="/assets/demo/demo.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+<script th:inline="javascript">
+
+    var usernamePage = document.querySelector('#username-page');
+    var chatPage = document.querySelector('#chat-page');
+    var usernameForm = document.querySelector('#usernameForm');
+    var messageForm = document.querySelector('#messageForm');
+    var messageInput = document.querySelector('#message');
+    var messageArea = document.querySelector('#messageArea');
+    var connectingElement = document.querySelector('.connecting');
+    var orderList = document.querySelector(".orderList")
+
+    var stompClient = null;
+    var username = null;
+
+    var colors = [
+        '#2196F3', '#32c787', '#00BCD4', '#ff5652',
+        '#ffc107', '#ff85af', '#FF9800', '#39bbb0'
+    ];
+
+    function connect(event) {
+        username = document.querySelector('#name').value.trim();
+
+        if (username) {
+            usernamePage.classList.add('hidden');
+            chatPage.classList.remove('hidden');
+
+            var socket = new SockJS('/ws');
+            stompClient = Stomp.over(socket);
+
+            stompClient.connect({}, onConnected, onError);
+        }
+        event.preventDefault();
+    }
+
+    const sno = [[${sno}]]
+
+    function onConnected() {
+// Subscribe to the Public Topic
+        stompClient.subscribe('/order/public/' + sno, onMessageReceived);
+
+// Tell your username to the server
+        stompClient.send("/app/chat.addUser",
+            {},
+            JSON.stringify({sender: username, type: 'JOIN'})
+        )
+
+        connectingElement.classList.add('hidden');
+    }
+
+
+    function onError(error) {
+        connectingElement.textContent = 'Could not connect to WebSocket server. Please refresh this page to try again!';
+        connectingElement.style.color = 'red';
+    }
+
+
+    function sendMessage(event) {
+        var messageContent = messageInput.value.trim();
+        if (messageContent && stompClient) {
+            var chatMessage = {
+                orderNum: username,
+                sno: [[${sno}]],
+                serialNum: "kiosk-0506",
+                orderMenuDTOList: orderarr
+            };
+            stompClient.send("/app/chat.sendMessage", {}, JSON.stringify(chatMessage));
+            messageInput.value = '';
+        }
+        event.preventDefault();
+    }
+
+
+    function onMessageReceived(payload) {
+        var message = JSON.parse(payload.body);
+
+        console.log("message: " + message.sno)
+
+        var messageElement = document.createElement('li');
+
+        if (message.type === 'JOIN') {
+            messageElement.classList.add('event-message');
+            message.content = message.sender + ' joined!';
+        } else if (message.type === 'LEAVE') {
+            messageElement.classList.add('event-message');
+            message.content = message.sender + ' left!';
+        } else if (message.type === 'ORDER') {
+
+            var orderDTO = JSON.parse(message.dto)
+
+            let mName = ""
+
+            for(var i=0; i<orderDTO.orderMenuDTOList.length; i++){
+                mName.innerHTML += "<h5 class='menu card-title'>"+orderDTO.orderMenuDTOList[i]+"</h5>"
+            }
+
+            console.dir(orderDTO)
+            orderList.append(mName)
+            orderList.innerHTML += "<div class='col-lg-6 col-md-6 col-sm-6'> " +
+                "<div class='menuInfo card card-stats'>" +
+            "<div class='card-header card-header-warning card-header-icon'> " +
+            "<h5 class='orderNum card-title'>"+orderDTO.orderNum+"</h5>"
+            for(var i=0; i<orderDTO.orderMenuDTOList.length; i++){
+                mName.innerHTML += "<p className='menuContent card-category'>sd</p>"
+                console.dir(mName)
+            }
+            "<p class='menuContent card-category'>sd</p>" +
+            "<p class='menuPrice card-category'>가격</p>" +
+            "</div>" +
+            "<div class='card-footer'>" +
+            "<div class='menuBtn stats' data-mno='${menu.mno }'>" +
+            "<button type='submit' class='modBtn btn btn-primary pull-right' style=''value='/admin/store/menuModify'>수정</button>" +
+            "<button type='submit' class='delBtn btn btn-danger pull-right'style=''>삭제</button>"+
+            "</div>" +
+            "</div>" +
+            "</div>"+
+                 "</div>"
+
+
+
+            messageElement.classList.add('chat-message');
+
+            var avatarElement = document.createElement('i');
+            var avatarText = document.createTextNode(message.orderNum);
+            avatarElement.appendChild(avatarText);
+            // avatarElement.style['background-color'] = getAvatarColor(message.orderNum);
+
+            messageElement.appendChild(avatarElement);
+
+
+            var usernameElement = document.createElement('span');
+            var usernameText = document.createTextNode(message.orderNum);
+            usernameElement.appendChild(usernameText);
+            messageElement.appendChild(usernameElement);
+        }
+
+        var textElement = document.createElement('p');
+        var messageText = document.createTextNode(message.dto);
+        textElement.appendChild(messageText);
+
+        messageElement.appendChild(textElement);
+
+        messageArea.appendChild(messageElement);
+        messageArea.scrollTop = messageArea.scrollHeight;
+    }
+
+
+    function getAvatarColor(messageSender) {
+        var hash = 0;
+        for (var i = 0; i < messageSender.length; i++) {
+            hash = 31 * hash + messageSender.charCodeAt(i);
+        }
+        var index = Math.abs(hash % colors.length);
+        return colors[index];
+    }
+
+    usernameForm.addEventListener('submit', connect, true)
+    //messageForm.addEventListener('submit', sendMessage, true)
+</script>
 </body>
+
 
 </html>

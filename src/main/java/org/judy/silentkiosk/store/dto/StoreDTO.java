@@ -29,6 +29,6 @@ public class StoreDTO {
 
     private boolean enable;
 
-    private List<StoreMenuDTO> menuList;
+    private StoreMenuDTO menuList;
 
 }

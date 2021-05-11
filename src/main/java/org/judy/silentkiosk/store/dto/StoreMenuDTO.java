@@ -2,6 +2,8 @@ package org.judy.silentkiosk.store.dto;
 
 import lombok.*;
 
+import java.util.List;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -18,4 +20,6 @@ public class StoreMenuDTO {
     private String mPrice,content,mImg;
 
     private Long cno;
+
+    private StoreToppingDTO toppingDTO;
 }

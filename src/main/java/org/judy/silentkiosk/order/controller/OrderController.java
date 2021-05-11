@@ -44,7 +44,7 @@ public class OrderController {
 
         String dto = gson.toJson(orderDTO);
 
-        ChatMessage chatMessage = ChatMessage.builder().orderNum(ordernum).sno(sno).dto(dto).type(MessageType.CHAT).build();
+        ChatMessage chatMessage = ChatMessage.builder().sno(sno).dto(dto).type(MessageType.ORDER).build();
         simpMessagingTemplate.convertAndSend(destination, chatMessage);
 
         return new ResponseEntity<>(ordernum , HttpStatus.OK);
