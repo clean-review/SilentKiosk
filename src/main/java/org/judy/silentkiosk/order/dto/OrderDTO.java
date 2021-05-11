@@ -14,7 +14,7 @@ import java.util.List;
 public class OrderDTO {
 
     //주문번호
-    private Long OrderNum;
+    private Long orderNum;
 
     private String serialNum;
 

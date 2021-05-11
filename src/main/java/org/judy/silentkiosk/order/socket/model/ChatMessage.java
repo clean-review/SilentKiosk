@@ -15,8 +15,6 @@ public class ChatMessage {
     //임시
     private String dto;
 
-    private Long orderNum;
-
     private MessageType type;
 
 }

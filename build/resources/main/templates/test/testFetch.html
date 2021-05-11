@@ -31,9 +31,7 @@
     orderMenuDTOList.push(orderMenuDTO1)
     orderMenuDTOList.push(orderMenuDTO2)
 
-
     const orderDTO = {sno:20, serialNum : "kiosk-0506", orderMenuDTOList: orderMenuDTOList}
-
     document.querySelector(".orderBtn").addEventListener("click", function (e) {
         e.preventDefault()
         console.log(orderDTO)
