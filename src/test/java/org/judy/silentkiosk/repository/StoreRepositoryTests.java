@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Arrays;
+import java.util.List;
+
 @SpringBootTest
 @Log4j2
 public class StoreRepositoryTests {
@@ -23,7 +26,16 @@ public class StoreRepositoryTests {
     @Test
     public void testGetStoreMenu(){
 
-        log.info(storeRepository.getStoreMenuBySno(53L));
+
+        Long sno = 53L;
+        List<Object[]> result = storeRepository.getStoreMenu(sno);
+        log.info(result);
+
+        result.forEach(arr -> {
+            log.info(Arrays.toString(arr));
+        });
+
+
     }
 
 
