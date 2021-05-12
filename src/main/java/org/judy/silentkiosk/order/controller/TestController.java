@@ -30,4 +30,9 @@ public class TestController {
 
         model.addAttribute("sname", orderService.getStoreName(sno));
     }
+
+    @GetMapping("/waiting")
+    public void waiting(@ModelAttribute("sno")Long sno){
+
+    }
 }
