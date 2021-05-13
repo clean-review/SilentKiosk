@@ -14,13 +14,7 @@ public class MenuServiceTests {
     MenuService menuService;
 
     @Test
-    public void getMenuToppingTest(){
-
-        log.info(menuService.getMenuTopping(73L));
-    }
-
-    @Test
     public void getMenuTest(){
-
+        log.info(menuService.getMenu(71L));
     }
 }

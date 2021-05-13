@@ -18,8 +18,15 @@ public class MenuRepositoryTests {
 
     @Test
     public void getMenuTest(){
-
         log.info(menuRepository.getStoreMenuBymno(71L));
     }
+    @Test
+    public void getMenuTest2(){
 
+        Long sno = 73L;
+
+        List<Object[]> result = menuRepository.getStoreMenu(sno);
+
+        result.forEach(arr -> log.info(Arrays.toString(arr)));
+    }
 }
