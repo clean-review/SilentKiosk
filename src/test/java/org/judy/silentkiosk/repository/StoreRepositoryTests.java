@@ -23,4 +23,20 @@ public class StoreRepositoryTests {
         log.info(storeRepository.getStoreBySno(sno));
     }
 
+    @Test
+    public void testGetStoreMenu(){
+
+
+        Long sno = 53L;
+        List<Object[]> result = storeRepository.getStoreMenu(sno);
+        log.info(result);
+
+        result.forEach(arr -> {
+            log.info(Arrays.toString(arr));
+        });
+
+
+    }
+
+
 }
