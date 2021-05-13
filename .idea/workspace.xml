@@ -221,8 +221,8 @@
       <item itemvalue="Gradle.StoreRepositoryTests.testGetStore" />
       <item itemvalue="Gradle.MenuRepositoryTests.getMenuTest" />
       <item itemvalue="Gradle.MenuServiceTests.getMenuTest" />
-      <item itemvalue="Spring Boot.SilentkioskApplication" />
       <item itemvalue="Gradle.silentkiosk [compileQuerydsl]" />
+      <item itemvalue="Spring Boot.SilentkioskApplication" />
     </list>
     <recent_temporary>
       <list>
