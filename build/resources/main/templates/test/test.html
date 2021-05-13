@@ -28,8 +28,6 @@
 
 
 <body class="">
-<!-- Modal -->
-
 
 <div id="username-page" >
     <div class="username-page-container">
@@ -49,54 +47,57 @@
 
 <div id="chat-page" class="hidden" style="overflow:scroll; ">
 
-    <div class="logo" style="padding-top: 30px; padding-bottom: 15px; padding-left: 30px">
+    <div class="logo" style="padding: 30px">
         <a href="/admin/notice/list" class="simple-text logo-normal"><span
                 style="font-family: 'yg-jalnan'; color: #ee6d39; font-size:x-large; ">Silent Kiosk</span></a>
     </div>
-    <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="border-bottom: #FFFFFF;">
-                    <!--<h5 class="modal-title">주문 도착 알림</h5>-->
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
 
-                    <h2 style="font-family: yg-jalnan; display: flex; justify-content: center;">주문이 도착했습니다</h2>
-                </div>
-                <div class="modal-footer" style="border-top: #FFFFFF;">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">확인</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-------------------------------------------card------------------------------------->
     <div class="content">
-
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="cardHeaderStyle card-header card-header-primary">
                             <div>
-                                <h2 class="card-title" style="font-family: yg-jalnan; margin-left:15px;">[[${sname}]]</h2>
+                                <h4 class="card-title ">[[${sname}]]</h4>
+                                <p class="card-category">Here is a subtitle for this table</p>
                             </div>
                         </div>
 
                         <div class="card-body">
 
                             <ul class="navCat nav nav-pills nav-fill">
-                                <li class="nav-item" style="background-color:#ee6d39"><a class="catNav nav-link"
-                                                        data-value="1" style="color:white; font-family: yg-jalnan;">주문리스트</a></li>
                                 <li class="nav-item"><a class="catNav nav-link "
-                                                        data-value="2" style="font-family: yg-jalnan;">주문완료</a></li>
+                                                        data-value="1">주문리스트</a></li>
+                                <li class="nav-item"><a class="catNav nav-link "
+                                                        data-value="2">주문완료</a></li>
                             </ul>
 
                             <div class="row orderList">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="menuInfo card card-stats">
+                                        <div class="card-header card-header-warning card-header-icon">
+                                            <h5 class="menuName card-title">메뉴이름</h5>
+                                            <p class="menuContent card-category">메뉴내용</p>
+                                            <p class="menuPrice card-category">가격</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="menuBtn stats" data-mno="${menu.mno }">
+                                                <button type="submit"
+                                                        class="modBtn btn btn-primary pull-right"
+                                                        style="" value="/admin/store/menuModify">수정
+                                                </button>
+                                                <button type="submit"
+                                                        class="delBtn btn btn-danger pull-right"
+                                                        style="">삭제
+                                                </button>
 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
                             <div class="row">
@@ -131,8 +132,6 @@
 
     </div>
 </div>
-
-
 
 
 <!--   Core JS Files   -->
@@ -194,12 +193,6 @@
 
     var stompClient = null;
     var username = null;
-
-    // 알림음 처리
-    var alarm = new Audio("/alarm.mp3")
-    console.dir(alarm)
-
-
 
     var colors = [
         '#2196F3', '#32c787', '#00BCD4', '#ff5652',
@@ -273,44 +266,38 @@
             messageElement.classList.add('event-message');
             message.content = message.sender + ' left!';
         } else if (message.type === 'ORDER') {
-            // order 후 알람
-            alarm.play()
-            // order 모달 창
-            $(".modal").modal("show")
-
-            function hide () {
-                $(".modal").modal("hide")
-            }
-            setTimeout(hide, 3000)
 
             var orderDTO = JSON.parse(message.dto)
 
-            let order = ""
+            let mName = ""
+
+            for(var i=0; i<orderDTO.orderMenuDTOList.length; i++){
+                mName.innerHTML += "<h5 class='menu card-title'>"+orderDTO.orderMenuDTOList[i]+"</h5>"
+            }
 
             console.dir(orderDTO)
-
-            order += "<div class=' col-lg-3 col-md-12 col-sm-6'> " +
-                "<div class='menuInfo card card-stats col-lg-12 col-md-6 col-sm-6'>" +
+            orderList.append(mName)
+            orderList.innerHTML += "<div class='col-lg-6 col-md-6 col-sm-6'> " +
+                "<div class='menuInfo card card-stats'>" +
             "<div class='card-header card-header-warning card-header-icon'> " +
-            "<h2 class='orderNum card-title' style='font-family: yg-jalnan; display: flex; margin-top: 10px'><b>"+orderDTO.orderNum+"</b></h2>"
+            "<h5 class='orderNum card-title'>"+orderDTO.orderNum+"</h5>"
             for(var i=0; i<orderDTO.orderMenuDTOList.length; i++){
-                order += "<h3  class='menuContent card-title col-lg-12'>"+orderDTO.orderMenuDTOList[i].mname+" x "+orderDTO.orderMenuDTOList[i].mqty+"</h3>"
-                for(var j=0; j<orderDTO.orderMenuDTOList[i].toppingDTOList.length; j++){
-                    order += "<h5  class='menuContent card-category col-lg-12'>"+orderDTO.orderMenuDTOList[i].toppingDTOList[j].tname+" x "+orderDTO.orderMenuDTOList[i].toppingDTOList[j].tqty+"</h5>"
-                }
+                mName.innerHTML += "<p className='menuContent card-category'>sd</p>"
+                console.dir(mName)
             }
-            order += "</div>" +
-            "<div class='card-footer' style='display: flex; justify-content: center;'>" +
+            "<p class='menuContent card-category'>sd</p>" +
+            "<p class='menuPrice card-category'>가격</p>" +
+            "</div>" +
+            "<div class='card-footer'>" +
             "<div class='menuBtn stats' data-mno='${menu.mno }'>" +
-            "<button type='submit' class='modBtn btn btn-primary pull-right' style='margin-right: 10px'value='/admin/store/menuModify'>완료</button>" +
-            "<button type='submit' class='delBtn btn btn-danger pull-right'style=''>취소</button>"+
+            "<button type='submit' class='modBtn btn btn-primary pull-right' style=''value='/admin/store/menuModify'>수정</button>" +
+            "<button type='submit' class='delBtn btn btn-danger pull-right'style=''>삭제</button>"+
             "</div>" +
             "</div>" +
             "</div>"+
                  "</div>"
 
 
-            orderList.innerHTML += order
 
             messageElement.classList.add('chat-message');
 

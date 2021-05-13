@@ -11,9 +11,10 @@ public interface MenuService {
 
     StoreMenuDTO getMenu(Long mno);
 
-    List<StoreMenuDTO> getMenuTopping(Long mno);
+    List<StoreToppingDTO> getMenuTopping(Long mno);
 
-    default StoreMenuDTO entityToDTO(StoreMenu storeMenu, StoreTopping topping) {
+    default StoreMenuDTO entityToDTO(StoreMenu storeMenu) {
+
         StoreMenuDTO storeMenuDTO = StoreMenuDTO.builder()
                 .mno(storeMenu.getMno())
                 .sno(storeMenu.getStore().getSno())
@@ -24,5 +25,15 @@ public interface MenuService {
                 .mImg(storeMenu.getMImg())
                 .build();
         return storeMenuDTO;
+    }
+
+    default StoreToppingDTO entityToTopDTO (StoreTopping topping){
+        StoreToppingDTO storeToppingDTO = StoreToppingDTO.builder()
+                .tno(topping.getTno())
+                .tPrice(topping.getTPrice())
+                .tImg(topping.getTImg())
+                .tName(topping.getTName())
+                .build();
+        return storeToppingDTO;
     }
 }
