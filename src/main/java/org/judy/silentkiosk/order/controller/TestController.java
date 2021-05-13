@@ -35,4 +35,6 @@ public class TestController {
     public void waiting(@ModelAttribute("sno")Long sno){
 
     }
+
+
 }
