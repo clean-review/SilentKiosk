@@ -15,7 +15,6 @@
 
     let toppingDTOList1 = []
     let toppingDTOList2 = []
-    let toppingDTOList3 = []
 
     const toppingDTO1 = {tno : 1, tname : "밥추가", tprice : "1000", tqty : 2}
     const toppingDTO2 = {tno : 2, tname : "샐러드추가", tprice : "500", tqty : 3}
@@ -26,16 +25,11 @@
     toppingDTOList2.push(toppingDTO1)
     toppingDTOList2.push(toppingDTO2)
 
-    toppingDTOList3.push(toppingDTO1)
-    toppingDTOList3.push(toppingDTO2)
-
     const orderMenuDTO1 = {mno : 1, mname :"치돈", mprice : "9000", mqty : 2 , toppingDTOList : toppingDTOList1}
     const orderMenuDTO2 = {mno : 2, mname :"냉까스", mprice : "8000", mqty : 1 , toppingDTOList : toppingDTOList2}
-    const orderMenuDTO3 = {mno : 3, mname :"냉까스", mprice : "8000", mqty : 1 , toppingDTOList : toppingDTOList2}
 
     orderMenuDTOList.push(orderMenuDTO1)
     orderMenuDTOList.push(orderMenuDTO2)
-    orderMenuDTOList.push(orderMenuDTO3)
 
     const orderDTO = {sno:20, serialNum : "kiosk-0506", orderMenuDTOList: orderMenuDTOList}
     document.querySelector(".orderBtn").addEventListener("click", function (e) {

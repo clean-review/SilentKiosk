@@ -1,14 +1,14 @@
-org/judy/silentkiosk/SilentkioskApplicationTests.java
- org.judy.silentkiosk.SilentkioskApplicationTests
-org/judy/silentkiosk/repository/ToppingRepositoryTests.java
- org.judy.silentkiosk.repository.ToppingRepositoryTests
-org/judy/silentkiosk/service/MenuServiceTests.java
- org.judy.silentkiosk.service.MenuServiceTests
-org/judy/silentkiosk/order/repository/OrderRepositoryTests.java
- org.judy.silentkiosk.order.repository.OrderRepositoryTests
-org/judy/silentkiosk/order/service/OrderServiceTests.java
- org.judy.silentkiosk.order.service.OrderServiceTests
-org/judy/silentkiosk/repository/StoreRepositoryTests.java
- org.judy.silentkiosk.repository.StoreRepositoryTests
 org/judy/silentkiosk/repository/MenuRepositoryTests.java
  org.judy.silentkiosk.repository.MenuRepositoryTests
+org/judy/silentkiosk/order/repository/OrderRepositoryTests.java
+ org.judy.silentkiosk.order.repository.OrderRepositoryTests
+org/judy/silentkiosk/service/MenuServiceTests.java
+ org.judy.silentkiosk.service.MenuServiceTests
+org/judy/silentkiosk/repository/ToppingRepositoryTests.java
+ org.judy.silentkiosk.repository.ToppingRepositoryTests
+org/judy/silentkiosk/repository/StoreRepositoryTests.java
+ org.judy.silentkiosk.repository.StoreRepositoryTests
+org/judy/silentkiosk/order/service/OrderServiceTests.java
+ org.judy.silentkiosk.order.service.OrderServiceTests
+org/judy/silentkiosk/SilentkioskApplicationTests.java
+ org.judy.silentkiosk.SilentkioskApplicationTests
