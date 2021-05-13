@@ -83,8 +83,8 @@ org/judy/silentkiosk/common/entity/QBaseEntity.java
  org.judy.silentkiosk.common.entity.QBaseEntity
 org/judy/silentkiosk/order/controller/OrderController.java
  org.judy.silentkiosk.order.controller.OrderController
-org/judy/silentkiosk/order/controller/TestController.java
- org.judy.silentkiosk.order.controller.TestController
+org/judy/silentkiosk/store/service/StoreServiceImpl.java
+ org.judy.silentkiosk.store.service.StoreServiceImpl
 org/judy/silentkiosk/store/entity/QMenuTopping.java
  org.judy.silentkiosk.store.entity.QMenuTopping
 org/judy/silentkiosk/store/entity/QStore.java
@@ -99,5 +99,5 @@ org/judy/silentkiosk/ServletInitializer.java
  org.judy.silentkiosk.ServletInitializer
 org/judy/silentkiosk/store/repository/MenuRepository.java
  org.judy.silentkiosk.store.repository.MenuRepository
-org/judy/silentkiosk/store/service/StoreServiceImpl.java
- org.judy.silentkiosk.store.service.StoreServiceImpl
+org/judy/silentkiosk/order/controller/TestController.java
+ org.judy.silentkiosk.order.controller.TestController
