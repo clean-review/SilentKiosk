@@ -83,7 +83,7 @@
                     <h1 class='menuContent card-title' style="font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;">120</h1>
                     <h1 class='menuContent card-title' style="font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;">120</h1>
                   </div>
-                  <div class=' col-sm 'style="margin-left: 20px;">
+                  <div class='col-sm making'style="margin-left: 20px;">
                     <h1 class='menuContent card-title' style="font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;">120</h1>
                     <h1 class='menuContent card-title' style="font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;">120</h1>
                     <h1 class='menuContent card-title' style="font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;">120</h1>
@@ -198,6 +198,8 @@
   var connectingElement = document.querySelector('.connecting');
   var orderList = document.querySelector(".orderList")
 
+  const making = document.querySelector(".making")
+
   var stompClient = null;
   var username = null;
 
@@ -268,7 +270,7 @@
   function onMessageReceived(payload) {
     var message = JSON.parse(payload.body);
 
-    console.log("message: " + message.sno)
+    console.log("message: " + message.orderNum)
 
     var messageElement = document.createElement('li');
 
@@ -279,59 +281,15 @@
       messageElement.classList.add('event-message');
       message.content = message.sender + ' left!';
     } else if (message.type === 'ORDER') {
-      // order 후 알람
-      alarm.play()
-      // order 모달 창
-      $(".modal").modal("show")
 
-      function hide () {
-        $(".modal").modal("hide")
-      }
-      setTimeout(hide, 3000)
+      console.dir(message.dto)
+      let orderDTO = JSON.parse(message.dto)
 
-      var orderDTO = JSON.parse(message.dto)
+      making.innerHTML += "<h1 className='menuContent card-title' id='o_"+orderDTO.orderNum+"' style='font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;'>"+orderDTO.orderNum+"</h1>"
 
-      let order = ""
+    }else if(message.type === 'FINISH'){
 
-      console.dir(orderDTO)
-
-      order += "<div class=' col-lg-3 col-md-12 col-sm-6'> " +
-              "<div class='menuInfo card card-stats col-lg-12 col-md-6 col-sm-6'>" +
-              "<div class='card-header card-header-warning card-header-icon'> " +
-              "<h2 class='orderNum card-title' style='font-family: yg-jalnan; display: flex; margin-top: 10px'><b>"+orderDTO.orderNum+"</b></h2>"
-      for(var i=0; i<orderDTO.orderMenuDTOList.length; i++){
-        order += "<h3  class='menuContent card-title col-lg-12'>"+orderDTO.orderMenuDTOList[i].mname+" x "+orderDTO.orderMenuDTOList[i].mqty+"</h3>"
-        for(var j=0; j<orderDTO.orderMenuDTOList[i].toppingDTOList.length; j++){
-          order += "<h5  class='menuContent card-category col-lg-12'>"+orderDTO.orderMenuDTOList[i].toppingDTOList[j].tname+" x "+orderDTO.orderMenuDTOList[i].toppingDTOList[j].tqty+"</h5>"
-        }
-      }
-      order += "</div>" +
-              "<div class='card-footer' style='display: flex; justify-content: center;'>" +
-              "<div class='menuBtn stats' data-mno='${menu.mno }'>" +
-              "<button type='submit' class='modBtn btn btn-primary pull-right' style='margin-right: 10px'value='/admin/store/menuModify'>완료</button>" +
-              "<button type='submit' class='delBtn btn btn-danger pull-right'style=''>취소</button>"+
-              "</div>" +
-              "</div>" +
-              "</div>"+
-              "</div>"
-
-
-      orderList.innerHTML += order
-
-      messageElement.classList.add('chat-message');
-
-      var avatarElement = document.createElement('i');
-      var avatarText = document.createTextNode(message.orderNum);
-      avatarElement.appendChild(avatarText);
-      // avatarElement.style['background-color'] = getAvatarColor(message.orderNum);
-
-      messageElement.appendChild(avatarElement);
-
-
-      var usernameElement = document.createElement('span');
-      var usernameText = document.createTextNode(message.orderNum);
-      usernameElement.appendChild(usernameText);
-      messageElement.appendChild(usernameElement);
+      making.querySelector("#o_"+message.orderNum).remove()
     }
 
     var textElement = document.createElement('p');
@@ -342,6 +300,7 @@
 
     messageArea.appendChild(messageElement);
     messageArea.scrollTop = messageArea.scrollHeight;
+
   }
 
 

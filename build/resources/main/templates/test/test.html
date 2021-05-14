@@ -242,20 +242,21 @@
         connectingElement.style.color = 'red';
     }
 
+    function sendMessage(event , orderNum) {
 
-    function sendMessage(event) {
-        var messageContent = messageInput.value.trim();
-        if (messageContent && stompClient) {
+        console.log(orderNum)
+
+        if (stompClient) {
             var chatMessage = {
-                orderNum: username,
+                orderNum: orderNum,
                 sno: [[${sno}]],
-                serialNum: "kiosk-0506",
-                orderMenuDTOList: orderarr
+                type: 'FINISH'
             };
             stompClient.send("/app/chat.sendMessage", {}, JSON.stringify(chatMessage));
-            messageInput.value = '';
         }
         event.preventDefault();
+
+        document.querySelector("#o_"+orderNum).remove()
     }
 
 
@@ -283,13 +284,13 @@
             }
             setTimeout(hide, 3000)
 
-            var orderDTO = JSON.parse(message.dto)
+            let orderDTO = JSON.parse(message.dto)
 
             let order = ""
 
             console.dir(orderDTO)
 
-            order += "<div class=' col-lg-3 col-md-12 col-sm-6'> " +
+            order += "<div class=' col-lg-3 col-md-12 col-sm-6 orderNum' id='o_"+orderDTO.orderNum+"'> " +
                 "<div class='menuInfo card card-stats col-lg-12 col-md-6 col-sm-6'>" +
                 "<div class='card-header card-header-warning card-header-icon'> " +
                 "<h2 class='orderNum card-title' style='font-family: yg-jalnan; display: flex; margin-top: 10px'><b>"+orderDTO.orderNum+"</b></h2>"
@@ -301,8 +302,8 @@
             }
             order += "</div>" +
                 "<div class='card-footer' style='display: flex; justify-content: center;'>" +
-                "<div class='menuBtn stats' data-mno='${menu.mno }'>" +
-                "<button type='submit' class='modBtn btn btn-primary pull-right' style='margin-right: 10px'value='/admin/store/menuModify'>완료</button>" +
+                "<div class='menuBtn stats' >" +
+                "<button type='submit' class='modBtn btn btn-primary pull-right' style='margin-right: 10px'value='/admin/store/menuModify' onclick='sendMessage(event,"+orderDTO.orderNum+")'>완료</button>" +
                 "<button type='submit' class='delBtn btn btn-danger pull-right'style=''>취소</button>"+
                 "</div>" +
                 "</div>" +

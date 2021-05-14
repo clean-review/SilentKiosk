@@ -1,5 +1,7 @@
 package org.judy.silentkiosk.order.socket.controller;
 
+import org.judy.silentkiosk.order.dto.MessageDTO;
+import org.judy.silentkiosk.order.dto.OrderDTO;
 import org.judy.silentkiosk.order.socket.model.ChatMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -7,22 +9,24 @@ import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
-public class ChatController {
+public class ChatController{
 
     @Autowired
     private SimpMessagingTemplate simpMessagingTemplate;
 
     @MessageMapping("/chat.sendMessage")
-    public ChatMessage sendMessage(@Payload ChatMessage chatMessage) {
-        System.out.println(chatMessage);
-        Long sno = chatMessage.getSno();
+    public MessageDTO sendMessage(@Payload @RequestBody MessageDTO messageDTO) {
+        System.out.println(messageDTO);
+        Long sno = messageDTO.getSno();
         System.out.println("sno:" + sno);
         String destination = "/order/public/"+sno;
-        simpMessagingTemplate.convertAndSend(destination, chatMessage);
-        return chatMessage;
+        simpMessagingTemplate.convertAndSend(destination, messageDTO);
+        return messageDTO;
     }
 
     @MessageMapping("/chat.addUser")
