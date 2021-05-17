@@ -2,6 +2,7 @@ package org.judy.silentkiosk.order.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.judy.silentkiosk.order.entity.Order;
 import org.judy.silentkiosk.order.repository.OrderRepository;
 import org.judy.silentkiosk.store.entity.Store;
 import org.judy.silentkiosk.store.repository.StoreRepository;
@@ -27,6 +28,12 @@ public class OrderServiceImpl implements OrderService{
 
         return store.getSname();
 
+    }
+
+    @Override
+    public void insertOrder(Order order) {
+
+        orderRepository.save(order);
     }
 
 }

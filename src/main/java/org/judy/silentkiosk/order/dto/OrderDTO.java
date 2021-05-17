@@ -20,5 +20,7 @@ public class OrderDTO {
 
     private Long sno;
 
+    private String totalPrice;
+
     private List<OrderMenuDTO> orderMenuDTOList;
 }

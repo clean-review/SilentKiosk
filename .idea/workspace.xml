@@ -12,14 +12,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/socket/controller/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/socket/controller/ChatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/test/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/test/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/test/waiting.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/test/waiting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/socket/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/socket/controller/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/socket/model/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/socket/model/MessageType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/test/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test/waiting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/test/waiting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/dto/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/dto/OrderDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/judy/silentkiosk/order/repository/OrderRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/judy/silentkiosk/order/repository/OrderRepositoryTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,15 +93,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SilentkioskApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,6 +131,27 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;org.judy.silentkiosk.service.MenuServiceTests.getMenuTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="OrderRepositoryTests.insertOrder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;org.judy.silentkiosk.order.repository.OrderRepositoryTests.insertOrder&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -217,9 +235,11 @@
       <item itemvalue="Gradle.MenuServiceTests.getMenuTest" />
       <item itemvalue="Gradle.silentkiosk [compileQuerydsl]" />
       <item itemvalue="Spring Boot.SilentkioskApplication" />
+      <item itemvalue="Gradle.OrderRepositoryTests.insertOrder" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OrderRepositoryTests.insertOrder" />
         <item itemvalue="Gradle.silentkiosk [compileQuerydsl]" />
         <item itemvalue="Gradle.MenuServiceTests.getMenuTest" />
         <item itemvalue="Gradle.MenuRepositoryTests.getMenuTest" />

@@ -17,7 +17,6 @@ public class Order extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ono;
-	
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "serialNum")

@@ -28,9 +28,8 @@ public class OrderController {
 
         log.info(orderDTO);
 
-
         //DB에 저장하는 로직 쓸 위치
-
+        orderService.insertOrder(orderService.DTOtoEntity(orderDTO));
 
         Long sno = orderDTO.getSno();
 
