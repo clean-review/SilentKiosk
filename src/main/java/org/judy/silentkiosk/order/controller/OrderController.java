@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -23,6 +24,7 @@ public class OrderController {
 
     private final OrderService orderService;
 
+    @CrossOrigin
     @PostMapping("/getOrder")
     public ResponseEntity<Long> testOrder(@RequestBody OrderDTO orderDTO){
 
