@@ -64,7 +64,7 @@
             <div class="cardHeaderStyle card-header card-header-primary"
                  style="border-radius: 3px; margin-top: -20px; padding: 15px; width: 30vw; margin-left: 34vw; justify-content: center;">
               <div>
-                <h5 class="card-title" style="font-family: yg-jalnan; ">후쿠짱</h5>
+                <h5 class="card-title" style="font-family: yg-jalnan; ">몽이네 떡볶이</h5>
               </div>
             </div>
 
@@ -79,18 +79,11 @@
               <br />
 
               <div class="row orderList col-xs-4" style="border-color:#000000; border-style: solid; border-width: medium; border-radius: 30px; min-height: 450px;">
-                  <div class='col-sm'style="margin-left: 20px; border-right:medium solid #000000;">
-                    <h1 class='menuContent card-title' style="font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;">120</h1>
-                    <h1 class='menuContent card-title' style="font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;">120</h1>
+                  <div class='col-sm finish'style="margin-left: 20px; border-right:medium solid #000000;">
                   </div>
                   <div class='col-sm making'style="margin-left: 20px;">
-                    <h1 class='menuContent card-title' style="font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;">120</h1>
-                    <h1 class='menuContent card-title' style="font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;">120</h1>
-                    <h1 class='menuContent card-title' style="font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;">120</h1>
                   </div>
                  <div class=' col-sm 'style="margin-left: 20px;">
-                   <h1 class='menuContent card-title' style="font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;">120</h1>
-                   <h1 class='menuContent card-title' style="font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;">120</h1>
                 </div>
               </div>
 
@@ -102,10 +95,8 @@
                 </div>
 
 
-
-
               </div>
-              <div class="row">
+              <div class="row" style="display: none">
                 <div class="col-lg-6 col-md-6 col-sm-6 chat-container">
                   <div class="chat-header">
                     <h2>주문정보</h2>
@@ -197,6 +188,7 @@
   var messageArea = document.querySelector('#messageArea');
   var connectingElement = document.querySelector('.connecting');
   var orderList = document.querySelector(".orderList")
+  var finishList = document.querySelector(".finish")
 
   const making = document.querySelector(".making")
 
@@ -280,6 +272,18 @@
     } else if (message.type === 'LEAVE') {
       messageElement.classList.add('event-message');
       message.content = message.sender + ' left!';
+    }else if (message.type === 'FINISH'){
+      let orderNum = JSON.parse(message.orderNum)
+
+      let order = document.querySelector("#o_"+orderNum)
+
+      console.log(order)
+
+      order.remove()
+
+      finishList.innerHTML +=  "<h1 className='menuContent card-title' id='f_"+orderNum+"' style='font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;'>"+orderNum+"</h1>"
+
+
     } else if (message.type === 'ORDER') {
 
       console.dir(message.dto)
@@ -287,9 +291,16 @@
 
       making.innerHTML += "<h1 className='menuContent card-title' id='o_"+orderDTO.orderNum+"' style='font-family: yg-jalnan; margin-top: 20px; font-size: 100px; display: flex; justify-content: center; margin-top: 20px;'>"+orderDTO.orderNum+"</h1>"
 
-    }else if(message.type === 'FINISH'){
 
-      making.querySelector("#o_"+message.orderNum).remove()
+    }else if(message.type === 'CANCEL'){
+
+      let orderNum = JSON.parse(message.orderNum)
+
+      let order = document.querySelector("#o_"+orderNum)
+
+      console.log(order)
+
+      order.remove()
     }
 
     var textElement = document.createElement('p');

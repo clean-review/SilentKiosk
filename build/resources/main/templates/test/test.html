@@ -99,7 +99,7 @@
 
 
                             </div>
-                            <div class="row">
+                            <div class="row" style="display: none">
                                 <div class="col-lg-6 col-md-6 col-sm-6 chat-container">
                                     <div class="chat-header">
                                         <h2>주문정보</h2>
@@ -242,6 +242,23 @@
         connectingElement.style.color = 'red';
     }
 
+    function sendCancel(event , orderNum) {
+
+        console.log(orderNum)
+
+        if (stompClient) {
+            var chatMessage = {
+                orderNum: orderNum,
+                sno: [[${sno}]],
+                type: 'CANCEL'
+            };
+            stompClient.send("/app/chat.sendMessage", {}, JSON.stringify(chatMessage));
+        }
+        event.preventDefault();
+
+        document.querySelector("#o_"+orderNum).remove()
+    }
+
     function sendMessage(event , orderNum) {
 
         console.log(orderNum)
@@ -304,7 +321,7 @@
                 "<div class='card-footer' style='display: flex; justify-content: center;'>" +
                 "<div class='menuBtn stats' >" +
                 "<button type='submit' class='modBtn btn btn-primary pull-right' style='margin-right: 10px'value='/admin/store/menuModify' onclick='sendMessage(event,"+orderDTO.orderNum+")'>완료</button>" +
-                "<button type='submit' class='delBtn btn btn-danger pull-right'style=''>취소</button>"+
+                "<button type='submit' class='delBtn btn btn-danger pull-right'style='' onclick='sendCancel(event,"+orderDTO.orderNum+")'>취소</button>"+
                 "</div>" +
                 "</div>" +
                 "</div>"+

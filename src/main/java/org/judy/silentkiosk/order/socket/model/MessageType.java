@@ -1,10 +1,9 @@
 package org.judy.silentkiosk.order.socket.model;
 
 public enum MessageType {
-      ORDER,
-//    MAKING,
+    ORDER,
     FINISH,
     CANCEL,
-JOIN,
-//    LEAVE
+    JOIN,
+    PICKUP
 }

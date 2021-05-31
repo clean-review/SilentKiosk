@@ -13,7 +13,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/judy/silentkiosk/order/controller/OrderController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/querydsl/org/judy/silentkiosk/common/entity/QBaseEntity.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/querydsl/org/judy/silentkiosk/order/entity/QKiosk.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/querydsl/org/judy/silentkiosk/order/entity/QOrder.java" beforeDir="false" />
@@ -23,8 +22,12 @@
       <change beforePath="$PROJECT_DIR$/build/generated/querydsl/org/judy/silentkiosk/store/entity/QStore.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/querydsl/org/judy/silentkiosk/store/entity/QStoreMenu.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/querydsl/org/judy/silentkiosk/store/entity/QStoreTopping.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/test/waiting.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/test/waiting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/judy/silentkiosk/order/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/test/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test/waiting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/test/waiting.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,6 +269,7 @@
       <workItem from="1620266740897" duration="6619000" />
       <workItem from="1620637596636" duration="14000" />
       <workItem from="1620796151569" duration="13152000" />
+      <workItem from="1622449586424" duration="2051000" />
     </task>
     <servers />
   </component>
